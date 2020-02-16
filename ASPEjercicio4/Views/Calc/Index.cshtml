@@ -1,0 +1,35 @@
+﻿@model ASPEjercicio4.Models.calc
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+
+    <h2>Calculadora</h2>
+    <div class="row">
+        @using (Html.BeginForm("Index", "calc", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label for="n1">Primer Numero</label>
+                <input type="number" class="form-control" id="n1" name="n1" value="@Model.n1" />
+            </div>
+            <div class="form-group">
+                <label for="n1">Segundo Numero</label>
+                <input type="number" class="form-control" id="n2" name="n2" value="@Model.n2" />
+            </div>
+            <div class="form-group">
+                <label for="n1">Resultado</label>
+                <h2 class="form-group" id="result">@Model.resultado</h2>
+              
+            </div>
+            <input type="submit" class="bg-primary btn-info" value="sumar" name="operacion" />
+            <input type="submit" class="bg-info btn-info" value="restar" name="operacion" />
+            <input type="submit" class="bg-success btn-info" value="multiplicar" name="operacion" />
+            <input type="submit" class="bg-danger btn-info" value="dividir" name="operacion" />
+        }
+
+    </div>
+
+</div>
+
